@@ -1,4 +1,4 @@
-Script to watch project's less and js file.
+Script to watch project's less and js files.
 
 Javascript files would be compiled according to `build.rb` in the project javascript directory.
 Also, Lessc's `--include-path` option could be set in `lessc.watchr`.
@@ -12,12 +12,12 @@ Also, Lessc's `--include-path` option could be set in `lessc.watchr`.
 # Installation
 
 ## Copy File to Target Directory
-    cp ~/path/to/your/watchr-watch-project/bin/watchr-project ~/bin
-    cp ~/path/to/your/watchr-watch-project/lib/*.watchr ~/lib
+    cp ~/path/to/watchr-watch-project/bin/watchr-project ~/bin
+    cp ~/path/to/watchr-watch-project/lib/*.watchr ~/lib
 
 ## Modify Path
 
-### Add "lib" path to environment vartiable.
+### Add "lib" path to environment variable.
 Open `~/.bashrc` and add the following line:
 
     export lib=~/dev/src/lib
@@ -29,7 +29,7 @@ Open `~/lib/js.watchr` and modify `@js_lib_dir`.
     @js_lib_dir = ENV["lib"] + "/custom/snippets"
 
 
-### Modify the include path of lessc.
+### Modify lessc --include-path option.
 
 Open `~/lib/lessc.watchr` and modify `@inc_path`. This variable would be used as `lessc --include-path` option
 
@@ -50,10 +50,12 @@ Open `~/bin/watchr-project` and modify `WEB_ROOT` path. Also, if you like, you c
     watchr ~/lib/js.watchr $WEB_ROOT/$PROJECT/assets/js/src/build.rb &
 
 
-[See build.rb file example](/tree/master/examples/build.rb)
+[See build.rb file example](/beata/watchr-watch-project/blob/master/examples/build.rb)
+
 
 # Usage
 
 Create your project under WEB_ROOT path and execute this command:
 
     watchr-project PROJECT_NAME
+
