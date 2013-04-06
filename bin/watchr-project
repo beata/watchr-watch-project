@@ -1,0 +1,14 @@
+#!/bin/bash
+WEB_ROOT=~/www/work.dev/public
+PROJECT=$1
+ORIG_DIR=$(pwd)
+
+if [ -d "$WEB_ROOT/$PROJECT/assets" ]; then
+    cd $WEB_ROOT/$PROJECT/assets
+    watchr ~/lib/js.watchr $WEB_ROOT/$PROJECT/assets/js/src/build.rb &
+    watchr ~/lib/lessc.watchr &
+fi
+
+cd $lib/custom && watchr ~/lib/js.watchr $WEB_ROOT/$PROJECT/assets/js/src/build.rb &
+
+cd $ORIG_DIR
