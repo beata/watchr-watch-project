@@ -50,7 +50,7 @@ Open `~/bin/watchr-project` and modify `WEB_ROOT` path. Also, if you like, you c
     watchr ~/lib/js.watchr $WEB_ROOT/$PROJECT/assets/js/src/build.rb &
 
 
-[See build.rb file example](/beata/watchr-watch-project/blob/master/examples/build.rb)
+[See build.rb file example](https://github.com/beata/watchr-watch-project/blob/master/examples/build.rb)
 
 
 # Usage
