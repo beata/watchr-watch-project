@@ -52,7 +52,7 @@ def _compile_js(config, changed)
 
     files = config[:files].join(" ")
 
-    system("uglifyjs2 #{files} -o #{output_pathname.realpath.to_s} && echo #{@date} \"#{changed} -> #{output_str}\"")
+    system("uglifyjs #{files} -o #{output_pathname.realpath.to_s} && echo #{@date} \"#{changed} -> #{output_str}\"")
 end
 
 load_config if !$configure
