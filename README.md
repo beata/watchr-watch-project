@@ -1,7 +1,6 @@
-Script to watch project's less and js files.
+Script to watch project's less and js files, which helps you to compile javascript and less files automatically.
 
-Javascript files would be compiled according to `build.rb` in the project javascript directory.
-Also, Lessc's `--include-path` option could be set in `lessc.watchr`.
+Javascript files would be compiled according to the settings in `build.rb`.
 
 # Requirement
 
@@ -24,14 +23,14 @@ Open `~/.bashrc` and add the following line:
 
 ### Modify javascirpt lib path to yours.
 
-Open `~/lib/js.watchr` and modify `@js_lib_dir`.
+Open `~/lib/js.watchr` and change `@js_lib_dir` path matching yours.
 
     @js_lib_dir = ENV["lib"] + "/custom/snippets"
 
 
 ### Modify lessc --include-path option.
 
-Open `~/lib/lessc.watchr` and modify `@inc_path`. This variable would be used as `lessc --include-path` option
+Open `~/lib/lessc.watchr` and change `@inc_path` matchin your folder structure. This variable would be `--include-path` option for `lessc` command
 
     @inc_path = [
         ".",
@@ -41,7 +40,9 @@ Open `~/lib/lessc.watchr` and modify `@inc_path`. This variable would be used as
 
 ### Modify Project Root Path.
 
-Open `~/bin/watchr-project` and modify `WEB_ROOT` path. Also, if you like, you can modify the javascript configuration path in this file as well.
+* [ ] TODO: detect current working directory and remove this step.
+
+Open `~/bin/watchr-project` and modify `WEB_ROOT` path. If you like, you can modify the javascript configuration path in this file as well.
 
     # the WEB_ROOT path
     WEB_ROOT=~/www/work.dev/public
