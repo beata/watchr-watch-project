@@ -40,17 +40,6 @@ Open `~/lib/lessc.watchr` and change `@inc_path` matchin your folder structure. 
 
 ### Modify Project Root Path.
 
-* [ ] TODO: detect current working directory and remove this step.
-
-Open `~/bin/watchr-project` and modify `WEB_ROOT` path. If you like, you can modify the javascript configuration path in this file as well.
-
-    # the WEB_ROOT path
-    WEB_ROOT=~/www/work.dev/public
-
-    # assets/js/src/build.rb - the js configuration file
-    watchr ~/lib/js.watchr $WEB_ROOT/$PROJECT/assets/js/src/build.rb &
-
-
 [See build.rb file example](https://github.com/beata/watchr-watch-project/blob/master/examples/build.rb)
 
 
@@ -58,5 +47,5 @@ Open `~/bin/watchr-project` and modify `WEB_ROOT` path. If you like, you can mod
 
 Create your project under WEB_ROOT path and execute this command:
 
-    watchr-project PROJECT_NAME
+    watchr-project ABS_PATH_TO_PROJECT
 
